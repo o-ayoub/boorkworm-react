@@ -12,6 +12,7 @@ import UserRoute from "./components/routes/UserRoute";
 import GuestRoute from "./components/routes/GuestRoute";
 import ForgotPasswordPage from './components/pages/ForgotPasswordPage';
 import ResetPasswordPage from './components/pages/ResetPasswordPage';
+import NewBookPage from './components/pages/NewBookPage';
 
 import TopNavigation from './components/navigation/TopNavigation';
 
@@ -24,8 +25,8 @@ const App = ({ location, isAuthenticated }) => (
     <GuestRoute location={location} path='/signup' exact component={SignupPage}/>
     <GuestRoute location={location} path='/forgot_password' exact component={ForgotPasswordPage}/>
     <GuestRoute location={location} path='/reset_password/:token' exact component={ResetPasswordPage}/>
-    <UserRoute location={location} path='/dashboard' exact component={DashboardPage}
-    />
+    <UserRoute location={location} path='/dashboard' exact component={DashboardPage}/>
+    <UserRoute location={location} path='/books/new' exact component={NewBookPage} />
   </div>
 );
 
